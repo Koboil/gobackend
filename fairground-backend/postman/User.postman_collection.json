@@ -1,0 +1,758 @@
+{
+	"info": {
+		"_postman_id": "4f90046a-2f94-4ef3-9b6b-97832743c720",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39036884"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"first_name\": \"Sudent99\",\r\n        \"last_name\":\"Sudent99\",\r\n        \"email\": \"student@gmail.com\",\r\n        \"password\":\"123456\",\r\n        \"role\": \"student\" //student parent stand-holder orgainzer \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"email\": \"shehzadstudent@gmail.com\",\r\n        \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRwYXJlbnRAZ21haWwuY29tIiwiZXhwIjoxNzI5Njc1MTAzLCJyb2xlIjoicGFyZW50IiwidXNlcl9pZCI6IjI4In0.kA79b997FL8_N0qLtAYOwi50o3sBjvC7CfP2OvnSxB4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhcmVudEBnbWFpbC5jb20iLCJleHAiOjE3Mjk0MjcyMTQsInJvbGUiOiJwYXJlbnQifQ.QmtCiBbc8kpPgJAfPeFrX61GZPyKWKc1vnE9pdeR7Yo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ME",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yZ2FuaXplckBnbWFpbC5jb20iLCJleHAiOjE3Mjk5NTE2MDEsInJvbGUiOiJvcmdhbml6ZXIiLCJ1c2VyX2lkIjoiMTMifQ.QZUBa5c5PreF7aHSg4pjYHHivy1U_w4-dEr4r6z0slo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/user/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Tokens",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhcmVudEBnbWFpbC5jb20iLCJleHAiOjE3Mjk0MjUzOTYsInJvbGUiOiJwYXJlbnQifQ.ThMryzTx59RNYrV6CCOJsmm0xhxxFGQ7T_7bLd7v1EE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/tokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List My Tokens",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRwYXJlbnRAZ21haWwuY29tIiwiZXhwIjoxNzI5NTg1MjM1LCJyb2xlIjoicGFyZW50In0.Xqlg_xV-_W9RWYspBG__vfzdCvFkbSPdXF90lKKM1bA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/tokens/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tokens",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhcmVudEBnbWFpbC5jb20iLCJleHAiOjE3Mjk1ODIzNTgsInJvbGUiOiJwYXJlbnQifQ.VjCtH9FH34-MLzt7tPy-YdEcVgqsvc8wQqT-Wjft6Sk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/tokens/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tokens",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhcmVudEBnbWFpbC5jb20iLCJleHAiOjE3Mjk0MjcyMTQsInJvbGUiOiJwYXJlbnQifQ.QmtCiBbc8kpPgJAfPeFrX61GZPyKWKc1vnE9pdeR7Yo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Parents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhcmVudEBnbWFpbC5jb20iLCJleHAiOjE3Mjk0MjcyMTQsInJvbGUiOiJwYXJlbnQifQ.QmtCiBbc8kpPgJAfPeFrX61GZPyKWKc1vnE9pdeR7Yo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/parents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"parents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List My Students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRwYXJlbnRAZ21haWwuY29tIiwiZXhwIjoxNzI5NjMzNDQ3LCJyb2xlIjoicGFyZW50IiwidXNlcl9pZCI6IjI4In0.YH8EMCpXWqsZkwcbx5sAtFaJQ-PingFsRCjRwun9sNo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/parents/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"parents",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete My Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRwYXJlbnRAZ21haWwuY29tIiwiZXhwIjoxNzI5NjMzNDQ3LCJyb2xlIjoicGFyZW50IiwidXNlcl9pZCI6IjI4In0.YH8EMCpXWqsZkwcbx5sAtFaJQ-PingFsRCjRwun9sNo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/parents/student/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"parents",
+						"student",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Student to parent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRwYXJlbnRAZ21haWwuY29tIiwiZXhwIjoxNzI5NjMzNDQ3LCJyb2xlIjoicGFyZW50IiwidXNlcl9pZCI6IjI4In0.YH8EMCpXWqsZkwcbx5sAtFaJQ-PingFsRCjRwun9sNo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"9876@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/parents/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"parents",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRwYXJlbnRAZ21haWwuY29tIiwiZXhwIjoxNzI5Njc1MTAzLCJyb2xlIjoicGFyZW50IiwidXNlcl9pZCI6IjI4In0.kA79b997FL8_N0qLtAYOwi50o3sBjvC7CfP2OvnSxB4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/parents/student/{studentId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"parents",
+						"student",
+						"{studentId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tranfer Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRwYXJlbnRAZ21haWwuY29tIiwiZXhwIjoxNzI5Njc1MzA0LCJyb2xlIjoicGFyZW50IiwidXNlcl9pZCI6IjI4In0.uhBlEOTAVYIW75ayJoy0mUaLoK6tlFJJsvWiqn93Zps",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to_user_id\": 31,\r\n    \"tokens\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/tokens/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tokens",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My Transactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRwYXJlbnRAZ21haWwuY29tIiwiZXhwIjoxNzI5Njg0Nzc2LCJyb2xlIjoicGFyZW50IiwidXNlcl9pZCI6IjI4In0.o4E7Aost9PS-PuHDrwZ5vgjXedaYlx57nQAL_2nHHeQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/transactions/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"transactions",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Students Parents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRzdHVkZW50QGdtYWlsLmNvbSIsImV4cCI6MTcyOTY4OTE1OSwicm9sZSI6InN0dWRlbnQiLCJ1c2VyX2lkIjoiMzMifQ.8kdfaOGIGWGzuGRKNWI_MybQxL4fwyBo-WbnSdydXy4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/students/parents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						"parents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Parent to Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRzdHVkZW50QGdtYWlsLmNvbSIsImV4cCI6MTcyOTY4OTE1OSwicm9sZSI6InN0dWRlbnQiLCJ1c2VyX2lkIjoiMzMifQ.8kdfaOGIGWGzuGRKNWI_MybQxL4fwyBo-WbnSdydXy4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"parent1@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/students/parent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						"parent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Parent From Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRzdHVkZW50QGdtYWlsLmNvbSIsImV4cCI6MTcyOTc1MzU4NCwicm9sZSI6InN0dWRlbnQiLCJ1c2VyX2lkIjoiMzMifQ.xWOjNGztdYBAqMlnO1wK4_onyFmWxzH_i6BogL5ZWNA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/students/parent/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						"parent",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllRaffles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN0YW5kaG9sZGVyQGdtYWlsLmNvbSIsImV4cCI6MTcyOTkyNzM0OCwicm9sZSI6InN0YW5kLWhvbGRlciIsInVzZXJfaWQiOiIxMCJ9.liYEkSYnw9aES_yg00V1gvZ3LT_Lhgk-neiWPxfgxFE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/raffles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"raffles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List My Raffle Tickets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN0dWRlbnRwb29yQGdtYWlsLmNvbSIsImV4cCI6MTcyOTkzNzM5Nywicm9sZSI6InN0dWRlbnQiLCJ1c2VyX2lkIjoiMzgifQ.xY2EObD5XKsKskYi9OZIRkQrz4q2R9Ke7Qw4YOH7Jt0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/raffle/tickets/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"raffle",
+						"tickets",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Raffle Ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoZWh6YWRwYXJlbnRAZ21haWwuY29tIiwiZXhwIjoxNzI5OTQ3Mjc2LCJyb2xlIjoicGFyZW50IiwidXNlcl9pZCI6IjI4In0.XB6vMpm5VLtbFuvMk31iYrl_GDnwg-ZYhRLMOOy5sC8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/raffle/ticket/purchase/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"raffle",
+						"ticket",
+						"purchase",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
